@@ -1,9 +1,12 @@
 Package: com.milodarling.actisound
 Name: ActiSound
-Depends: mobilesubstrate, libactivator
-Version: 0.0.1
+Version: 1.0
 Architecture: iphoneos-arm
-Description: An awesome MobileSubstrate tweak!
-Maintainer: Milo Darling
-Author: Milo Darling
+Author: Milo Darling <milodarling98@gmail.com>
+Depiction: http://rcrepo.com/depictions/?dep=com.milodarling.actisound
+Priority: extra
 Section: Tweaks
+Description: An activator action to play a sound file.
+Depends: mobilesubstrate, libactivator
+Homepage: http://reddit.com/r/rcrepo
+Maintainer: TheMacMini09 <themacmini09@gmail.com>

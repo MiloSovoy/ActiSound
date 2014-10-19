@@ -5,7 +5,7 @@ Activator gesture to play sound.
 
 Anyone willing to make me an icon or help with this tweak, by all means feel free to do so!
 
-Special thanks to Phillip Tennen/Codyd51 and Steve Rolfe/Chewmeiser for their code from CallNow and FreeFall, which was extensively used in this tweak.
+Special thanks to Phillip Tennen/Codyd51 and Steve Rolfe/Chewmieser for their code from CallNow and FreeFall, which was extensively used in this tweak.
 
 Licensed under the [Do What The Fuck You Want To Public License](http://www.wtfpl.net/)
 
