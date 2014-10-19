@@ -7,7 +7,7 @@ Anyone willing to make me an icon or help with this tweak, by all means feel fre
 
 Special thanks to Phillip Tennen/Codyd51 and Steve Rolfe/Chewmeiser for their code from CallNow and FreeFall, which was extensively used in this tweak.
 
-Licensed under the [Do What The Fuck You Want Public License](http://www.wtfpl.net/)
+Licensed under the [Do What The Fuck You Want To Public License](http://www.wtfpl.net/)
 
                 DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
                         Version 2, December 2004
