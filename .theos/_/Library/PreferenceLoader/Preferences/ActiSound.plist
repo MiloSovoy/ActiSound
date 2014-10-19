@@ -1,0 +1,10 @@
+{
+    entry = {
+	bundle = ActiSound;
+	cell = PSLinkCell;
+	detail = ActiSoundListController;
+	icon = ActiSound.png;
+	isController = 1;
+	label = ActiSound;
+    };
+}

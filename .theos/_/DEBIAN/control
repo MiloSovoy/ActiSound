@@ -1,0 +1,10 @@
+Package: com.milodarling.actisound
+Name: ActiSound
+Depends: mobilesubstrate, libactivator
+Architecture: iphoneos-arm
+Description: An awesome MobileSubstrate tweak!
+Maintainer: Milo Darling
+Author: Milo Darling
+Section: Tweaks
+Version: 0.0.1-16
+Installed-Size: 500

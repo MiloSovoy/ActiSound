@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>ActiSound</string>
+			<key>footerText</key>
+			<string>New sounds can be placed in /Library/ActiSound/</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>default</key>
+			<string>WilhelmScream.wav</string>
+			<key>defaults</key>
+			<string>com.milodarling.actisound</string>
+			<key>key</key>
+			<string>sound</string>
+			<key>label</key>
+			<string>Sound</string>
+			<key>detail</key>
+			<string>PSListItemsController</string>
+			<key>valuesDataSource</key>
+			<string>getValues:</string>
+			<key>titlesDataSource</key>
+			<string>getValues:</string>
+			<key>PostNotification</key>
+			<string>com.milodarling.actisound</string>
+			<key>set</key>
+			<string>previewAndSet:forSpecifier:</string>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>ActiSound</string>
+</dict>
+</plist>
