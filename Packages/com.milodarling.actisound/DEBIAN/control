@@ -9,5 +9,5 @@ Description: An activator action to play a sound file.
 Depends: mobilesubstrate, libactivator
 Homepage: http://reddit.com/r/rcrepo
 Maintainer: TheMacMini09 <themacmini09@gmail.com>
-Version: 1.1-1
+Version: 1.0-2
 Installed-Size: 504

@@ -16,13 +16,13 @@
 			<key>cell</key>
 			<string>PSLinkListCell</string>
 			<key>default</key>
-			<string>WilhelmScream.wav</string>
+			<string>None</string>
 			<key>defaults</key>
 			<string>com.milodarling.actisound</string>
 			<key>key</key>
-			<string>sound</string>
+			<string>sound1</string>
 			<key>label</key>
-			<string>Sound</string>
+			<string>Sound 1</string>
 			<key>detail</key>
 			<string>PSListItemsController</string>
 			<key>valuesDataSource</key>
@@ -30,9 +30,109 @@
 			<key>titlesDataSource</key>
 			<string>getValues:</string>
 			<key>PostNotification</key>
-			<string>com.milodarling.actisound</string>
+			<string>com.milodarling.actisound/prefsChanged</string>
 			<key>set</key>
 			<string>previewAndSet:forSpecifier:</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>default</key>
+			<string>None</string>
+			<key>defaults</key>
+			<string>com.milodarling.actisound</string>
+			<key>key</key>
+			<string>sound2</string>
+			<key>label</key>
+			<string>Sound 2</string>
+			<key>detail</key>
+			<string>PSListItemsController</string>
+			<key>valuesDataSource</key>
+			<string>getValues:</string>
+			<key>titlesDataSource</key>
+			<string>getValues:</string>
+			<key>PostNotification</key>
+			<string>com.milodarling.actisound/prefsChanged</string>
+			<key>set</key>
+			<string>previewAndSet:forSpecifier:</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>default</key>
+			<string>None</string>
+			<key>defaults</key>
+			<string>com.milodarling.actisound</string>
+			<key>key</key>
+			<string>sound3</string>
+			<key>label</key>
+			<string>Sound 3</string>
+			<key>detail</key>
+			<string>PSListItemsController</string>
+			<key>valuesDataSource</key>
+			<string>getValues:</string>
+			<key>titlesDataSource</key>
+			<string>getValues:</string>
+			<key>PostNotification</key>
+			<string>com.milodarling.actisound/prefsChanged</string>
+			<key>set</key>
+			<string>previewAndSet:forSpecifier:</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>default</key>
+			<string>None</string>
+			<key>defaults</key>
+			<string>com.milodarling.actisound</string>
+			<key>key</key>
+			<string>sound4</string>
+			<key>label</key>
+			<string>Sound 4</string>
+			<key>detail</key>
+			<string>PSListItemsController</string>
+			<key>valuesDataSource</key>
+			<string>getValues:</string>
+			<key>titlesDataSource</key>
+			<string>getValues:</string>
+			<key>PostNotification</key>
+			<string>com.milodarling.actisound/prefsChanged</string>
+			<key>set</key>
+			<string>previewAndSet:forSpecifier:</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>default</key>
+			<string>None</string>
+			<key>defaults</key>
+			<string>com.milodarling.actisound</string>
+			<key>key</key>
+			<string>sound5</string>
+			<key>label</key>
+			<string>Sound 5</string>
+			<key>detail</key>
+			<string>PSListItemsController</string>
+			<key>valuesDataSource</key>
+			<string>getValues:</string>
+			<key>titlesDataSource</key>
+			<string>getValues:</string>
+			<key>PostNotification</key>
+			<string>com.milodarling.actisound/prefsChanged</string>
+			<key>set</key>
+			<string>previewAndSet:forSpecifier:</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+ 			<string>PSLinkCell</string>
+			<key>label</key>
+			<string>Activation Methods</string>
+			<key>isController</key>
+			<true/>
+			<key>bundle</key>
+			<string>LibActivator</string>			
+			<key>activatorListener</key>
+			<string>com.milodarling.actisound</string>
 		</dict>
 	</array>
 	<key>title</key>
