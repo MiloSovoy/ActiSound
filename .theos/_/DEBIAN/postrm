@@ -1,0 +1,6 @@
+#!/bin/bash
+rm -f /Library/Activator/Listeners/com.milodarling.actisound.sound1
+rm -f  /Library/Activator/Listeners/com.milodarling.actisound.sound2
+rm -f /Library/Activator/Listeners/com.milodarling.actisound.sound3
+rm -f /Library/Activator/Listeners/com.milodarling.actisound.sound4
+rm -f /Library/Activator/Listeners/com.milodarling.actisound.sound5

@@ -3,7 +3,7 @@
 	bundle = ActiSound;
 	cell = PSLinkCell;
 	detail = ActiSoundListController;
-	icon = ActiSound.png;
+	icon = /Library/ActiSound/Icons/icon-small.png;
 	isController = 1;
 	label = ActiSound;
     };

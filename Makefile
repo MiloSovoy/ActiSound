@@ -14,8 +14,12 @@ ActiSound_PRIVATE_FRAMEWORKS = Preferences
 include $(THEOS_MAKE_PATH)/tweak.mk
 
 internal-stage::
-	$(ECHO_NOTHING)mkdir -p $(THEOS_STAGING_DIR)/Library/ActiSound$(ECHO_END)
+	$(ECHO_NOTHING)find resources "-name" ".DS_Store" -exec rm {} \;$(ECHO_END)
+	$(ECHO_NOTHING)mkdir -p $(THEOS_STAGING_DIR)/Library/ActiSound/Icons$(ECHO_END)
 	$(ECHO_NOTHING)cp -r resources/* $(THEOS_STAGING_DIR)/$(ECHO_END)
+	$(ECHO_NOTHING)mkdir -p $(THEOS_STAGING_DIR)/DEBIAN$(ECHO_END)
+	$(ECHO_NOTHING)cp -r postinst $(THEOS_STAGING_DIR)/DEBIAN$(ECHO_END)
+	$(ECHO_NOTHING)cp -r postrm $(THEOS_STAGING_DIR)/DEBIAN$(ECHO_END)
 
 after-install::
 	install.exec "killall -9 SpringBoard"

@@ -14,7 +14,6 @@
 @implementation ActiSoundListController
 - (id)specifiers {
     directoryContent = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:@"/Library/ActiSound" error:NULL];
-    
 	if(_specifiers == nil) {
 		_specifiers = [[self loadSpecifiersFromPlistName:@"ActiSound" target:self] retain];
 	}
@@ -32,7 +31,12 @@
 
 // List our directory content
 - (NSArray *)getValues:(id)target{
-    return [[NSArray arrayWithObjects:@"None",nil] arrayByAddingObjectsFromArray:directoryContent];
+    NSMutableArray *listing = [NSMutableArray arrayWithObjects:@"None",nil];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"pathExtension != ''"];
+    for (NSURL *fileURL in [directoryContent filteredArrayUsingPredicate:predicate]) {
+        [listing addObject:fileURL];
+    }
+    return listing;
 }
 
 @end

@@ -1,0 +1,6 @@
+#!/bin/bash
+ln -s /Library/ActiSound/Icons/ /Library/Activator/Listeners/com.milodarling.actisound.sound1
+ln -s /Library/ActiSound/Icons/ /Library/Activator/Listeners/com.milodarling.actisound.sound2
+ln -s /Library/ActiSound/Icons/ /Library/Activator/Listeners/com.milodarling.actisound.sound3
+ln -s /Library/ActiSound/Icons/ /Library/Activator/Listeners/com.milodarling.actisound.sound4
+ln -s /Library/ActiSound/Icons/ /Library/Activator/Listeners/com.milodarling.actisound.sound5

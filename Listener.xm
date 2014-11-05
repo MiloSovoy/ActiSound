@@ -19,6 +19,8 @@ NSString *sound3;
 NSString *sound4;
 NSString *sound5;
 
+static NSDictionary *prefs;
+
 static inline unsigned char ActiSoundListenerName(NSString *listenerName) {
     unsigned char en;
     if ([listenerName isEqualToString:id1]) {
@@ -100,24 +102,39 @@ SystemSoundID soundPref;
 
 @end
 
-static void updatePrefs(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo) {
-    NSString *settingsPath = @"/var/mobile/Library/Preferences/com.milodarling.actisound.plist";
+static void updatePrefs() {
+    [prefs release];
+    CFStringRef appID = CFSTR("com.milodarling.actisound");
+    CFArrayRef keyList = CFPreferencesCopyKeyList(appID, kCFPreferencesCurrentUser, kCFPreferencesAnyHost);
+    if (!keyList) {
+        NSLog(@"There's been an error getting the key list!");
+        return;
+    }
+    prefs = (NSDictionary *)CFPreferencesCopyMultiple(keyList, appID, kCFPreferencesCurrentUser, kCFPreferencesAnyHost);
+    if (!prefs) {
+        NSLog(@"There's been an error getting the preferences dictionary!");
+    }
+    sound1 = [prefs objectForKey:@"sound1"] ?: @"None";
+    NSLog(@"Sound 1: %@", sound1);
+    sound2 = [prefs objectForKey:@"sound2"] ?: @"None";
+    NSLog(@"Sound 2: %@", sound2);
+    sound3 = [prefs objectForKey:@"sound3"] ?: @"None";
+    NSLog(@"Sound 3: %@", sound3);
+    sound4 = [prefs objectForKey:@"sound4"] ?: @"None";
+    NSLog(@"Sound 4: %@", sound4);
+    sound5 = [prefs objectForKey:@"sound5"] ?: @"None";
+    NSLog(@"Sound 5: %@", sound5);
     
-    NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:settingsPath];
-    
-    sound1 = [prefs objectForKey:@"sound1"];
-    if (!sound1) sound1 = @"None";
-    sound2 = [prefs objectForKey:@"sound2"];
-    if (!sound2) sound2 = @"None";
-    sound3 = [prefs objectForKey:@"sound3"];
-    if (!sound3) sound3 = @"None";
-    sound4 = [prefs objectForKey:@"sound4"];
-    if (!sound4) sound4 = @"None";
-    sound5 = [prefs objectForKey:@"sound5"];
-    if (!sound5) sound5 = @"None";
+    CFRelease(keyList);
 
 }
 
 %ctor {
-    CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), NULL, updatePrefs, CFSTR("com.milodarling.actisound/prefsChanged"), NULL, CFNotificationSuspensionBehaviorCoalesce);
+    CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(),
+                                    NULL,
+                                    (CFNotificationCallback)updatePrefs,
+                                    CFSTR("com.milodarling.actisound/prefsChanged"),
+                                    NULL,
+                                    CFNotificationSuspensionBehaviorCoalesce);
+    updatePrefs();
 }
